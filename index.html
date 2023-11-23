@@ -19,14 +19,14 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <!-- <a-scene embedded arjs>
-            <a-assets>
+        <a-scene embedded arjs>
+            <!-- <a-assets>
                 <img id="b1" src="img/b1.png">
                 <img id="b2" src="img/b2.png">
                 <img id="g1" src="img/g1.png">
-                <img id="g2" src="img/g1.png">
+                <img id="g2" src="img/g2.png">
                 <img id="g3" src="img/g3.png">
-            </a-assets>
+            </a-assets> -->
             <a-marker type="pattern" url="img/marker/pattern-m_b1.patt">
                 <a-image src="img/b1.png" width="1" height="1" position="0 0 0"></a-image>
             </a-marker>
@@ -39,36 +39,6 @@
             <a-marker type="pattern" url="img/marker/pattern-m_g2.patt">
                 <a-image src="img/g2.png" width="1" height="1" position="0 0 0"></a-image>
             </a-marker>
-            <a-marker type="pattern" url="img/marker/pattern-m_g3.patt">
-                <a-image src="img/g3.png" width="1" height="1" position="0 0 0"></a-image>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene> -->
-        <a-scene embedded arjs>
-            <a-marker type="pattern" url="img/marker/pattern-m_b1.patt">
-                <a-image src="img/b1.png" width="1" height="1" position="0 0 0"></a-image>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-        <a-scene embedded arjs>
-            <a-marker type="pattern" url="img/marker/pattern-m_b2.patt">
-                <a-image src="img/b2.png" width="1" height="1" position="0 0 0"></a-image>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-        <a-scene embedded arjs>
-            <a-marker type="pattern" url="img/marker/pattern-m_g1.patt">
-                <a-image src="#img/g1.png" width="1" height="1" position="0 0 0"></a-image>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-        <a-scene embedded arjs>
-            <a-marker type="pattern" url="img/marker/pattern-m_g2.patt">
-                <a-image src="img/g2.png" width="1" height="1" position="0 0 0"></a-image>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-        <a-scene embedded arjs>
             <a-marker type="pattern" url="img/marker/pattern-m_g3.patt">
                 <a-image src="img/g3.png" width="1" height="1" position="0 0 0"></a-image>
             </a-marker>
