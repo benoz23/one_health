@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ULSS 2 - I percorsi del Pronto Soccorso</title>
+        <meta name="description" content="Una serie di informazioni sul funzionamento del Pronto Soccorso e sui criteri di gestione delle priorità nella presa in cura dei pazienti.">
+        
+        <link rel="icon" href="img/ico/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="styles.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+
+        <script src="https://kit.fontawesome.com/1bbfd0af93.js" crossorigin="anonymous"></script>
+    </head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+            <a-assets>
+                <img id="b1" src="img/b1.png">
+                <img id="b2" src="img/b2.png">
+                <img id="g1" src="img/g1.png">
+                <img id="g2" src="img/g1.png">
+                <img id="g3" src="img/g3.png">
+            </a-assets>
+            <a-marker preset="hiro">
+                <a-entity
+                position="0 0 0"
+                scale="0.05 0.05 0.05"
+                gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+                ></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
