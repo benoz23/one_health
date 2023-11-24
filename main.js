@@ -4,12 +4,14 @@ AFRAME.registerComponent('markerhandler', {
 
     this.el.sceneEl.addEventListener('markerFound', () => {
       console.log(`Marker ${markerId} found`);
-      
-      // Disable other markers
+
+      // Hide content within other markers
       this.el.sceneEl.querySelectorAll('[markerhandler]').forEach((marker) => {
         if (marker !== this.el) {
-          marker.setAttribute('visible', false);
-          console.log(`Hiding marker ${marker.id}`);
+          marker.querySelectorAll('[visible]').forEach((content) => {
+            content.setAttribute('visible', false);
+            console.log(`Hiding content within marker ${marker.id}`);
+          });
         }
       });
     });
@@ -17,10 +19,12 @@ AFRAME.registerComponent('markerhandler', {
     this.el.sceneEl.addEventListener('markerLost', () => {
       console.log(`Marker ${markerId} lost`);
 
-      // Enable all markers
+      // Show content within all markers
       this.el.sceneEl.querySelectorAll('[markerhandler]').forEach((marker) => {
-        marker.setAttribute('visible', true);
-        console.log(`Showing marker ${marker.id}`);
+        marker.querySelectorAll('[visible]').forEach((content) => {
+          content.setAttribute('visible', true);
+          console.log(`Showing content within marker ${marker.id}`);
+        });
       });
     });
   }
