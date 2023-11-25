@@ -20,9 +20,9 @@
         <!-- <script src="main.js"></script> -->
     </head>
     <body style="margin : 0px; overflow: hidden;">
+        <!-- BARCODE START -->
         <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-            <!-- BARCODE START -->
             <a-marker markerhandler type="barcode" value="0" emitevents="true" smooth="true">
                 <a-image src="img/b1.png" width="3" height="3" position="0 1 0"></a-image>
             </a-marker>
@@ -42,9 +42,14 @@
             <a-marker markerhandler type="barcode" value="4" emitevents="true" smooth="true">
                 <a-image src="img/g3.png" width="3" height="3" position="0 1 0"></a-image>
             </a-marker>
-            <!-- BARCODE END -->
 
-            <!-- PATTERN START -->
+            <a-entity camera></a-entity>
+        </a-scene>
+        <!-- BARCODE END -->
+
+        <!-- PATTERN START -->
+        <a-scene embedded arjs>
+
             <a-marker markerhandler id="m_a1" type="pattern" url="img/marker/pattern-m_a1.patt" emitevents="true" smooth="true">
                 <a-image src="img/b1.png" width="3" height="3" position="0 1 0" visible="true"></a-image>
             </a-marker>
@@ -64,9 +69,9 @@
             <a-marker markerhandler id="m_e5" type="pattern" url="img/marker/pattern-m_e5.patt" emitevents="true" smooth="true">
                 <a-image src="img/g3.png" width="3" height="3" position="0 1 0" visible="true"></a-image>
             </a-marker>
-            <!-- PATTERN END -->
 
             <a-entity camera></a-entity>
         </a-scene>
+        <!-- PATTERN END -->
     </body>
 </html>
